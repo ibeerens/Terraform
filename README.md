@@ -1,6 +1,6 @@
 # Terraform
 
-# Install Prereq
+## Install Prereq
 
 Azure CLI download https://learn.microsoft.com/en-us/cli/azure/
 
