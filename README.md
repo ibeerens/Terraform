@@ -7,6 +7,7 @@ Azure CLI download https://learn.microsoft.com/en-us/cli/azure/
 Logging in to Azure CLI https://registry.terraform.io/providers/hashicorp/azuread/latest/docs/guides/azure_cli
 
 *az login*
+
 *az account show*
 
 ##  Create a Service Principal
