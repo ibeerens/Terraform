@@ -7,7 +7,7 @@ Azure CLI download https://learn.microsoft.com/en-us/cli/azure/
 
 Logging in to Azure CLI
 
-az login
+*az login*
 
 
 # Create Service Principal
