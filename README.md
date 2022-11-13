@@ -8,7 +8,7 @@ Logging in to Azure CLI https://registry.terraform.io/providers/hashicorp/azurea
 
 *az login*
 
-# Create a Service Principal
+##  Create a Service Principal
 
 Create Service Principal https://learn.microsoft.com/en-us/azure/developer/terraform/authenticate-to-azure?tabs=bash#create-a-service-principal
 
