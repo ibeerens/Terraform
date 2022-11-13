@@ -3,8 +3,7 @@ Terraform
 
 # Install Pre
 
-*Azure CLI*
-https://learn.microsoft.com/en-us/cli/azure/
+Azure CLI download https://learn.microsoft.com/en-us/cli/azure/
 
 Logging in to Azure CLI
 
