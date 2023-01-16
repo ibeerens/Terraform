@@ -1,18 +1,18 @@
 # Terraform
 
-## Install Prereq
+## Install Prerequisites
 
 ```
 Azure CLI download
 https://learn.microsoft.com/en-us/cli/azure/
 ```
 
-Logging in to Azure CLI https://registry.terraform.io/providers/hashicorp/azuread/latest/docs/guides/azure_cli
+## Logging in to Azure CLI 
 
 ```
-*az login*
+az login
 
-*az account show*
+az account show
 ```
 
 ## Create a Service Principal
