@@ -3,6 +3,7 @@
 Open Cloud Shell in the Azure Portal and select PowerShell
 
 ## Variables
+```
 
 $resourceGroup ="rg-tfstate"
 
@@ -25,6 +26,8 @@ az storage account create -n $storageAccount -g $resourceGroup -l $location --sk
 
 ## Create Service Principal 
 az ad sp create-for-rbac --name $serviceprincipalname
+
+```
 
 In Teraform add the following lines to the maint.tf file for example:
 
