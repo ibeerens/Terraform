@@ -1,6 +1,6 @@
 # Store the Terraform state file in a blob storage account 
 
-Open Cloud Shell in the Azure Portal and select PowerShell
+- Open Cloud Shell in the Azure Portal and select PowerShell
 
 
 ```
