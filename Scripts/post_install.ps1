@@ -3,6 +3,8 @@
     version: 1.0 creation
 #>
 
+Set-ExecutionPolicy Bypass -Scope Process -Force 
+
 # Variables
 $powerManagement = "8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c"
 $tempFolder = "C:\Temp" 
@@ -16,7 +18,10 @@ if (!(test-path $tempFolder))
 {
 New-Item -ItemType Directory -Path $tempFolder -Force | Out-Null
 }
- 
+
+#Download script
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/ibeerens/Terraform/main/Scripts/post_install.ps1" -OutFile $tempfolder
+
 #Set power management to High
 powercfg.exe -SETACTIVE $powerManagement
 
