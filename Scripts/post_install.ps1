@@ -20,7 +20,11 @@ New-Item -ItemType Directory -Path $tempFolder -Force | Out-Null
 }
 
 #Download script
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/ibeerens/Terraform/main/Scripts/post_install.ps1" -OutFile $tempfolder
+# Invoke-WebRequest -Uri "https://raw.githubusercontent.com/ibeerens/Terraform/main/Scripts/post_install.ps1" -OutFile $tempfolder
+
+# Install Choco
+# iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+# choco install notepadplusplus -y
 
 #Set power management to High
 powercfg.exe -SETACTIVE $powerManagement
