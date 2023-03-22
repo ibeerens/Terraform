@@ -19,6 +19,27 @@ if (!(test-path $tempFolder))
 New-Item -ItemType Directory -Path $tempFolder -Force | Out-Null
 }
 
+# Search for software winget search microsoft
+# winget list | out-gridview
+
+$a = @(
+    'Microsoft.PowerShell'
+    'Microsoft.AzureCLI'
+    'Microsoft.Bicep'
+    'Microsoft.VisualStudioCode'
+    'Microsoft.Azure.StorageExplorer'
+    'Microsoft.Sysinternals.RDCMan'
+    'Microsoft.Azure.Aztfy'
+    'Hashicorp.Terraform'
+    'git.git'
+)
+
+$winget_add = '--silent --accept-package-agreements --accept-source-agreements'
+
+foreach ($item in $a) {
+    winget install --id $item --silent --accept-package-agreements --accept-source-agreements
+}
+
 #Download script
 # Invoke-WebRequest -Uri "https://raw.githubusercontent.com/ibeerens/Terraform/main/Scripts/post_install.ps1" -OutFile $tempfolder
 
