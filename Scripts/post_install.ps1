@@ -19,6 +19,14 @@ if (!(test-path $tempFolder))
 New-Item -ItemType Directory -Path $tempFolder -Force | Out-Null
 }
 
+#Set power management to High
+powercfg.exe -SETACTIVE $powerManagement
+
+#set OS drive label
+$drive = Get-WmiObject win32_volume -Filter "DriveLetter = 'C:'"
+$drive.Label = $osdisklabel
+$drive.put() | Out-Null
+
 # Search for software winget search microsoft
 # winget list | out-gridview
 
@@ -46,11 +54,3 @@ foreach ($item in $a) {
 # Install Choco
 # iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 # choco install notepadplusplus -y
-
-#Set power management to High
-powercfg.exe -SETACTIVE $powerManagement
-
-#set OS drive label
-$drive = Get-WmiObject win32_volume -Filter "DriveLetter = 'C:'"
-$drive.Label = $osdisklabel
-$drive.put() | Out-Null
