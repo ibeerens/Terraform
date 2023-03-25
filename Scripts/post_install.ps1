@@ -27,30 +27,6 @@ $drive = Get-WmiObject win32_volume -Filter "DriveLetter = 'C:'"
 $drive.Label = $osdisklabel
 $drive.put() | Out-Null
 
-# Search for software winget search microsoft
-# winget list | out-gridview
-
-$a = @(
-    'Microsoft.PowerShell'
-    'Microsoft.AzureCLI'
-    'Microsoft.Bicep'
-    'Microsoft.VisualStudioCode'
-    'Microsoft.Azure.StorageExplorer'
-    'Microsoft.Sysinternals.RDCMan'
-    'Microsoft.Azure.Aztfy'
-    'Hashicorp.Terraform'
-    'git.git'
-)
-
-$winget_add = '--silent --accept-package-agreements --accept-source-agreements'
-
-foreach ($item in $a) {
-    winget install --id $item --silent --accept-package-agreements --accept-source-agreements
-}
-
-#Download script
-# Invoke-WebRequest -Uri "https://raw.githubusercontent.com/ibeerens/Terraform/main/Scripts/post_install.ps1" -OutFile $tempfolder
-
 # Install Choco
-# iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-# choco install notepadplusplus -y
+iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+choco install notepadplusplus -y
