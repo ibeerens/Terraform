@@ -29,4 +29,5 @@ $drive.put() | Out-Null
 
 # Install Choco
 iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+choco install vscode
 choco install notepadplusplus -y
