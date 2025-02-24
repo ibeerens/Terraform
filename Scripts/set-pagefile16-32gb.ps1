@@ -10,6 +10,6 @@ $pagefileset.Put() | Out-Null
 
 Gwmi win32_Pagefilesetting | Select Name, InitialSize, MaximumSize
 
-# Uninstall and install Windows Photos
-winget uninstall --id 9WZDNCRFJBH4
-winget install --id 9WZDNCRFJBH4
+# # Uninstall and install Windows Photos
+# winget uninstall --id 9WZDNCRFJBH4
+# winget install --id 9WZDNCRFJBH4
